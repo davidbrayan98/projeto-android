@@ -1,19 +1,19 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /* fonte importada */
 
-@font-face {
-    font-family: 'Android';
-    src: url(../fontes/idroid.otf) format(opentype);
-    font-weight: normal;
+@font-face { /* Como utilizar fonte externa baixada */
+    font-family: 'Android'; /* Nome para a fonte */
+    src: url(../fontes/idroid.otf) format(opentype); /* Local onde a fonte está colocada e o formato dela */
+    font-weight: normal; /* Pesoa da fonte */
 }
 
-* {
+* { /* Configurações globais */
     margin: 0px;
     padding: 0px;
 }
 
-:root {
+:root { /* Variaveis globais, e abaixo como utilizar as mesmas */
     --cor0:#C5EBD6;
     --cor1:#83E1AD;
     --cor2:#3DDC84;
@@ -31,14 +31,14 @@ body {
     font-family: var(--fonte-padrao);
 }
 
-a.externo::after {
-    content: '\00A0\1F517';
+a.externo::after { /* Configurando links esternos e colocando um emoji na frente da palavra */
+    content: '\00A0\1F517'; /* comando para utilizar e o numero do emote */
 }
 
 header {
     min-height: 150px;
     text-align: center;
-    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /* Cria um background em degrade e o 'to bottom' é para escolher em que direção vai ser feito */
     font-family: var(--fonte-destaque);
 }
 
@@ -78,7 +78,7 @@ nav > a {
     transition-duration: 0.5s;
 }
 
-nav > a:hover {
+nav > a:hover { /* É para o que vai acontecer depois que vc por o mouse encima do link */
     background-color: var(--cor3);
     color: var(--cor5);
 }
@@ -113,9 +113,9 @@ main h2 {
 
 main p {
     margin: 15px 0px;
-    text-align: justify;
+    text-align: justify; /* Para identar o texto 'justify' a esquerda */
     text-indent: 30px;
-    line-height: 2em;
+    line-height: 2em; /* Espaço entre uma linha e outra */
     font-size: 1em;
 }
 
@@ -133,19 +133,19 @@ main a {
 }
 
 main a:hover{
-    text-decoration: underline;
-    transition-duration: 0.5s;
+    text-decoration: underline; /* Cria uma linha embaixo da palavra no caso o 'underline' */
+    transition-duration: 0.5s; /* O tempo que vai levar para o comando de cima acontecer */
     color: var(--cor5);
 }
 
 main img {
-    width: 100%;
+    width: 100%; /* talvez seja para centralizar ou para que a imagem ocupe o espaço total */
 }
 
-main img.pequena {
+main img.pequena { /* Configurando uma imagem que não tem outra em tamanho pequeno, para que fique responsiva e centralizada */
     max-width: 350px;
-    margin: auto;
-    display: block;
+    margin: auto; /* Para centralizar a imagem */
+    display: block; /* Para converter a imagem em algo que eu não lembro o que mas é isso, pq sem não funciona */
 }
 
 div.video {
@@ -172,10 +172,10 @@ aside {
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
-aside > ul {
-    list-style-position: inside;
+aside > ul { /* configurando a lista */
+    list-style-position: inside; /* Serve para deixar dentro o emoji da lista */
     list-style-type: '\2714\00A0\00A0';
-    columns: 2;
+    columns: 2; /* É para dividir a lista em duas colunas */
 }
 
 aside > h3 {
